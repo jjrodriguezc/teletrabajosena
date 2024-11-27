@@ -1,0 +1,79 @@
+{
+    "title": {
+        "media": {
+            "url": "https://es.wikipedia.org/wiki/Teletrabajo#Historia",
+            "caption": "Historia del Teletrabajo"
+        },
+        "text": {
+            "headline": "Historia y Normatividad del Teletrabajo",
+            "text": "Explora la evolución del teletrabajo en Colombia a través de los años y las leyes que lo han regulado."
+        }
+    },
+    "events": [
+        {
+            "media": {
+                "url": "https://es.wikipedia.org/wiki/Emma_Claudia_Castellanos",
+                "caption": "Ley 1221 de 2008"
+            },
+            "start_date": {
+                "year": "2008"
+            },
+            "text": {
+                "headline": "Ley 1221 de 2008",
+                "text": "Se aprobó la Ley 1221 en Colombia, que regula el teletrabajo como una modalidad laboral oficial. Es considerada la base del teletrabajo en el país."
+            }
+        },
+        {
+            "media": {
+                "url": "https://es.wikipedia.org/wiki/David_Luna#Candidato_al_Senado_de_la_Rep%C3%BAblica_de_Colombia",
+                "caption": "Impulso al teletrabajo en 2012"
+            },
+            "start_date": {
+                "year": "2012"
+            },
+            "text": {
+                "headline": "Impulso del MinTIC",
+                "text": "El Ministerio TIC lanza políticas que promueven el teletrabajo, incentivando su adopción en empresas públicas y privadas."
+            }
+        },
+        {
+            "media": {
+                "url": "https://es.wikipedia.org/wiki/Sistema_General_de_Riesgos_Laborales_(Colombia)",
+                "caption": "Ley 1562 de 2012"
+            },
+            "start_date": {
+                "year": "2012"
+            },
+            "text": {
+                "headline": "Ley 1562 de 2012",
+                "text": "Esta ley amplió las garantías laborales para los teletrabajadores, asegurando su acceso a seguridad social y otros beneficios."
+            }
+        },
+        {
+            "media": {
+                "url": "https://es.wikipedia.org/wiki/Teletrabajo#Teletrabajo_y_medio_ambiente",
+                "caption": "Pandemia y Teletrabajo"
+            },
+            "start_date": {
+                "year": "2020"
+            },
+            "text": {
+                "headline": "Teletrabajo durante la pandemia",
+                "text": "En 2020, debido a la pandemia de COVID-19, el teletrabajo se convirtió en la principal modalidad laboral para millones de trabajadores en todo el mundo."
+            }
+        },
+        {
+            "media": {
+                "url": "https://es.wikipedia.org/wiki/Teletrabajo#Descripci%C3%B3n",
+                "caption": "Trabajo Híbrido"
+            },
+            "start_date": {
+                "year": "2023"
+            },
+            "text": {
+                "headline": "Promoción del Trabajo Híbrido",
+                "text": "En 2023, se promovió el trabajo híbrido como una combinación eficiente de teletrabajo y trabajo presencial, marcando una nueva tendencia laboral."
+            }
+        }
+    ]
+}
