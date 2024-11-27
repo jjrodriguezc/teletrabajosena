@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Teletrabajo</title>
+    <link rel="stylesheet" href="../CSS/faq.css">
+
+</head>
+<body>
+    <!-- Header dynamically loaded -->
+    <script src="../Js/header.js"></script>
+
+    <main>
+        <section class="faq-section">
+            <h1>Preguntas Frecuentes sobre Teletrabajo</h1>
+
+            <!-- Introducción básica al teletrabajo -->
+            <section class="faq-section">
+
+    
+                <!-- Pregunta: ¿Qué es el teletrabajo? -->
+                <article class="faq-item" id="teletrabajo-article">
+                    <h2>¿Qué es el Teletrabajo?</h2>
+                    <div id="teletrabajo-text">
+                        <p>
+                            El teletrabajo es una modalidad laboral que permite a los trabajadores realizar sus actividades desde casa o cualquier lugar diferente a una oficina tradicional, utilizando tecnologías de la información como computadoras, teléfonos e internet.
+                            Esta forma de trabajo fue regulada en Colombia por la Ley 1221 de 2008, que establece los derechos y deberes de empleadores y teletrabajadores.
+                            En el contexto del SENA, el teletrabajo permite a los instructores diseñar guías de aprendizaje, evaluar actividades, impartir clases virtuales y coordinarse con otros instructores.
+                        </p>
+                        <p>
+                            También facilita la flexibilidad horaria, el ahorro en costos de transporte y la reducción del impacto ambiental. Sin embargo, requiere disciplina, un espacio adecuado y herramientas confiables.
+                            La desconexión digital es un derecho clave para evitar el agotamiento laboral.
+                        </p>
+                        <button id="start-quiz-btn" class="quiz-btn">¿Tomamos un quizz?</button>
+                    </div>
+    
+                    <!-- Quizz Section -->
+                    <div id="teletrabajo-quiz" style="display: none;">
+                        <h3>Prueba sobre el teletrabajo</h3>
+                        
+                        <div class="quiz-question">
+                            <p><strong>Pregunta 1:</strong> ¿El teletrabajo en Colombia está regulado por la Ley 1221 de 2008?</p>
+                            <button class="quiz-answer" data-correct="true">Verdadero</button>
+                            <button class="quiz-answer" data-correct="false">Falso</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <p><strong>Pregunta 2:</strong> ¿El teletrabajo elimina la necesidad de capacitación continua?</p>
+                            <button class="quiz-answer" data-correct="false">Verdadero</button>
+                            <button class="quiz-answer" data-correct="true">Falso</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <p><strong>Pregunta 3:</strong> ¿Es importante contar con un espacio adecuado para el teletrabajo?</p>
+                            <button class="quiz-answer" data-correct="true">Verdadero</button>
+                            <button class="quiz-answer" data-correct="false">Falso</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <p><strong>Pregunta 4:</strong> ¿El teletrabajo fomenta el ahorro en transporte?</p>
+                            <button class="quiz-answer" data-correct="true">Verdadero</button>
+                            <button class="quiz-answer" data-correct="false">Falso</button>
+                            <div class="feedback"></div>
+                        </div>
+                        
+                        <div class="quiz-question">
+                            <p><strong>Pregunta 5:</strong> ¿La desconexión digital es un derecho importante para los teletrabajadores?</p>
+                            <button class="quiz-answer" data-correct="true">Verdadero</button>
+                            <button class="quiz-answer" data-correct="false">Falso</button>
+                            <div class="feedback"></div>
+                        </div>
+    
+                        <button id="finish-quiz-btn" class="quiz-btn">Finalizar</button>
+                    </div>
+                </article>
+            </section>
+            <!-- Sección de beneficios -->
+            <article class="faq-item">
+                <h2>¿Cuáles son los beneficios del teletrabajo?</h2>
+                <div class="benefits-container">
+                    <!-- Tarjeta 1 -->
+                    <div class="benefit-card" onclick="showMoreInfo('info1')">
+                        <div class="info-content">
+                            <h3>Ahorro de tiempo y dinero</h3>
+                            <p>No necesitas gastar en transporte o alimentación fuera de casa.</p>
+                        </div>
+                        <div id="info1" class="more-info">
+                            <a href="https://www.teletrabajo.gov.co/814/w3-article-104223.html" target="_blank">¿Quieres más info? Dale click</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="benefit-card" onclick="showMoreInfo('info2')">
+                        <div class="info-content">
+                            <h3>Flexibilidad</h3>
+                            <p>Puedes organizar tu horario de manera más cómoda.</p>
+                        </div>
+                        <div id="info2" class="more-info">
+                            <a href="https://blogs.iadb.org/trabajo/es/teletrabajo-que-es-y-como-esta-cambiando-el-mundo-laboral/" target="_blank">¿Quieres más info? Dale click</a>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="benefit-card" onclick="showMoreInfo('info3')">
+                        <div class="info-content">
+                            <h3>Mayor concentración</h3>
+                            <p>Evita interrupciones del entorno laboral.</p>
+                        </div>
+                        <div id="info3" class="more-info">
+                            <a href="https://blog.cognifit.com/es/mejorar-la-concentracion-en-el-teletrabajo/" target="_blank">¿Quieres más info? Dale click</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+                        <!-- ROLES -->
+            
+            <article class="faq-item">
+                <h2>¿Qué roles o tareas pueden realizarse en modalidad de teletrabajo en el SENA?</h2>
+                <div class="illustration-container">
+                    <img src="../Img/desk-illustration.png" alt="Escritorio de teletrabajo" class="desk-illustration">
+                    
+                    <!-- Punto interactivo 1: Guías de aprendizaje -->
+                    <div class="interactive-point" style="top: 30%; left: 20%;" data-info="Crear guías de aprendizaje adaptadas a los aprendices, ofreciendo materiales claros y efectivos para el desarrollo de habilidades.">
+                        <span class="point"></span>
+                    </div>
+            
+                    <!-- Punto interactivo 2: Clases virtuales -->
+                    <div class="interactive-point" style="top: 50%; left: 50%;" data-info="Conéctate con tus aprendices mediante Zoom o Teams para impartir lecciones, resolver dudas y mantener la comunicación en tiempo real.">
+                        <span class="point"></span>
+                    </div>
+            
+                    <!-- Punto interactivo 3: Evaluación -->
+                    <div class="interactive-point" style="top: 70%; left: 75%;" data-info="Evalúa actividades y el progreso de los aprendices en plataformas como Moodle o Blackboard, gestionando evaluaciones y brindando retroalimentación.">
+                        <span class="point"></span>
+                    </div>
+                </div>
+                <div class="tooltip" id="tooltip"></div>
+            </article>
+            
+          
+             <!-- Rueda con sectores de herramientas -->
+
+             <article class="faq-item">
+                <h2>¿Qué herramientas digitales debo aprender a usar?</h2>
+                <div class="wheel-container">
+                    <div class="wheel">
+                        <div class="sector microsoft-teams" data-info="Para reuniones y clases grupales.">Microsoft Teams</div>
+                        <div class="sector zoom" data-info="Alternativa para videollamadas.">Zoom</div>
+                        <div class="sector moodle" data-info="Para subir actividades, guías y evaluar a los aprendices.">Moodle o Blackboard</div>
+                        <div class="sector trello" data-info="Para organizar tus tareas y fechas importantes.">Trello o Google Calendar</div>
+                    </div>
+                    <div class="wheel-info" id="wheel-info">Haz clic en una herramienta para ver más información.</div>
+                </div>
+            </article>
+
+                        <!-- DESPLEGABLE -->
+                      
+            <article class="faq-item">
+                <h2>¿Cómo puedo acceder a las plataformas del SENA?</h2>
+                
+                <!-- Lista desplegable de instrucciones -->
+                <div class="dropdown">
+                    <!-- Elemento desplegable 1 -->
+                    <div class="dropdown-item">
+                        <button class="dropdown-button">1. Correo institucional</button>
+                        <div class="dropdown-content">
+                            <p><strong>Paso 1:</strong> Abre tu navegador (Chrome, Firefox, o Edge para mejor compatibilidad).</p>
+                            <p><strong>Paso 2:</strong> En la barra de direcciones, escribe <a href="https://correo.sena.edu.co" target="_blank">correo.sena.edu.co</a> y presiona "Enter".</p>
+                            <p><strong>Paso 3:</strong> Ingresa tus credenciales:</p>
+                            <ul>
+                                <li><strong>Usuario:</strong> Tu número de documento o usuario asignado por el SENA.</li>
+                                <li><strong>Contraseña:</strong> La clave proporcionada por el SENA o la que hayas configurado.</li>
+                            </ul>
+                            <p><strong>Paso 4:</strong> Si tienes problemas para acceder, intenta restablecer tu contraseña siguiendo las instrucciones en la página o contacta al soporte técnico.</p>
+                        </div>
+                    </div>
+
+                    <!-- Elemento desplegable 2 -->
+                    <div class="dropdown-item">
+                        <button class="dropdown-button">2. Plataforma Moodle o Blackboard</button>
+                        <div class="dropdown-content">
+                            <p><strong>Paso 1:</strong> Abre el navegador de tu preferencia.</p>
+                            <p><strong>Paso 2:</strong> Ve a la plataforma correspondiente:</p>
+                            <ul>
+                                <li><strong>Moodle:</strong> Dirígete a la URL específica proporcionada por tu coordinador (puede variar).</li>
+                                <li><strong>Blackboard:</strong> Ingresa en la URL <a href="https://sena.blackboard.com" target="_blank">https://sena.blackboard.com</a>.</li>
+                            </ul>
+                            <p><strong>Paso 3:</strong> Introduce tus credenciales de usuario. Estas deberían ser las mismas que usas para otros servicios del SENA.</p>
+                            <p><strong>Paso 4:</strong> Si no recuerdas tu contraseña, utiliza la opción "Recuperar Contraseña" en la página o contacta a soporte para ayuda adicional.</p>
+                            <p><strong>Paso 5:</strong> Una vez dentro, navega a tus cursos asignados y revisa las actividades, guías, y recursos disponibles.</p>
+                        </div>
+                    </div>
+
+                    <!-- Elemento desplegable 3 -->
+                    <div class="dropdown-item">
+                        <button class="dropdown-button">3. Soporte técnico</button>
+                        <div class="dropdown-content">
+                            <p><strong>Paso 1:</strong> Si tienes problemas para acceder a alguna de las plataformas, primero verifica tu conexión a internet y asegúrate de que tu navegador esté actualizado.</p>
+                            <p><strong>Paso 2:</strong> Comunícate con el equipo de soporte técnico del SENA.</p>
+                            <p><strong>Opciones de contacto:</strong></p>
+                            <ul>
+                                <li><strong>Teléfono:</strong> Llama a la línea de atención al cliente del SENA (verifica el número actualizado en la página oficial).</li>
+                                <li><strong>Email:</strong> Envía un correo describiendo tu problema a <a href="mailto:soporte@sena.edu.co">soporte@sena.edu.co</a> o a la dirección específica indicada por tu coordinador.</li>
+                                <li><strong>Chat en línea:</strong> Accede al portal del SENA y utiliza el chat en línea para obtener asistencia rápida (disponible en horarios de oficina).</li>
+                            </ul>
+                            <p><strong>Paso 3:</strong> Ten a mano la siguiente información al contactar soporte:</p>
+                            <ul>
+                                <li>Tu número de documento y nombre completo.</li>
+                                <li>La descripción del problema y los pasos que has intentado para resolverlo.</li>
+                                <li>El nombre de la plataforma en la que tienes problemas (correo, Moodle, Blackboard).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            
+            <section class="glossary-section">
+                <h2>Glosario de Términos sobre Teletrabajo</h2>
+                <ul class="glossary-list">
+                    <li class="glossary-item" data-definition="La Ley 1221 de 2008 regula el teletrabajo en Colombia, estableciendo derechos y obligaciones para empleadores y trabajadores.">Ley 1221 de 2008</li>
+                    <li class="glossary-item" data-definition="Derecho a desconectar de los medios digitales fuera del horario laboral para evitar el agotamiento y proteger la vida privada.">Desconexión Digital</li>
+                    <li class="glossary-item" data-definition="El empleador debe proporcionar las herramientas y el equipo necesarios para realizar el teletrabajo de manera efectiva y segura.">Herramientas de Teletrabajo</li>
+                    <li class="glossary-item" data-definition="Principio que establece que los teletrabajadores deben recibir las mismas condiciones laborales que aquellos que trabajan en una oficina física.">Igualdad de Condiciones</li>
+                    <li class="glossary-item" data-definition="Conjunto de prácticas y herramientas que protegen la información y los datos durante el teletrabajo, incluyendo el uso de contraseñas fuertes y antivirus.">Seguridad de la Información</li>
+                    <li class="glossary-item" data-definition="Requisito esencial para el teletrabajo; una conexión de internet estable mantiene una velocidad constante, sin cortes frecuentes. Se recomienda un mínimo de 10 Mbps.">Internet Estable</li>
+                    <li class="glossary-item" data-definition="Herramienta que permite acceder a redes privadas de forma segura desde cualquier lugar, protegiendo la transferencia de datos.">VPN (Red Privada Virtual)</li>
+                    <li class="glossary-item" data-definition="Plataforma de comunicación y colaboración que permite realizar videollamadas, enviar mensajes y compartir archivos.">Microsoft Teams</li>
+                    <li class="glossary-item" data-definition="Plataformas de aprendizaje en línea donde los instructores pueden subir actividades, guías y evaluaciones.">Moodle y Blackboard</li>
+                    <li class="glossary-item" data-definition="Derecho que garantiza que los datos personales y la vida privada de los teletrabajadores estén protegidos.">Derecho a la Privacidad</li>
+                    <li class="glossary-item" data-definition="Espacio físico en el que el teletrabajador desempeña sus actividades. Se recomienda buena iluminación, ergonomía y bajo nivel de ruido.">Ambiente de Trabajo</li>
+                    <li class="glossary-item" data-definition="Medida del rendimiento del trabajador desde casa, relacionada con la capacidad de cumplir tareas y metas laborales de manera eficiente.">Productividad en Teletrabajo</li>
+                    <li class="glossary-item" data-definition="Herramientas de organización y planificación de tareas. Trello permite gestionar proyectos en equipo mediante tableros; Google Calendar ayuda a programar reuniones.">Trello y Google Calendar</li>
+                    <li class="glossary-item" data-definition="Adaptación del espacio de trabajo para evitar problemas de salud física, como dolor de espalda o fatiga visual.">Ergonomía en Teletrabajo</li>
+                    <li class="glossary-item" data-definition="Breves descansos durante la jornada laboral recomendados para evitar el agotamiento físico y mental.">Pausas Activas</li>
+                    <li class="glossary-item" data-definition="Derecho de los teletrabajadores a recibir formación continua para desarrollar habilidades técnicas y digitales.">Derecho a Capacitación</li>
+                    <li class="glossary-item" data-definition="Normativa que establece las obligaciones del empleador en cuanto a la prevención de riesgos laborales en el teletrabajo.">Normatividad de Riesgos Laborales</li>
+                    <li class="glossary-item" data-definition="Asistencia proporcionada por el empleador o una entidad externa para resolver problemas técnicos que afecten el desempeño del teletrabajador.">Soporte Técnico</li>
+                    <li class="glossary-item" data-definition="Forma de comunicación a través de video en tiempo real, utilizada en el teletrabajo para mantener reuniones y clases virtuales.">Videoconferencia</li>
+                    <li class="glossary-item" data-definition="Modalidad de trabajo en la que los empleados no necesitan estar conectados al mismo tiempo, permitiendo mayor flexibilidad horaria.">Trabajo Asíncrono</li>
+                    <li class="glossary-item" data-definition="Conjunto de normas y procedimientos establecidos para guiar el comportamiento de los teletrabajadores.">Política de Teletrabajo</li>
+                    <li class="glossary-item" data-definition="Derecho de los teletrabajadores a ser evaluados bajo criterios justos y equitativos.">Derecho a Evaluación Justa</li>
+                    <li class="glossary-item" data-definition="Normas que orientan el comportamiento del trabajador en el entorno digital, promoviendo el respeto y la profesionalidad.">Código de Conducta Digital</li>
+                    <li class="glossary-item" data-definition="Medidas para garantizar que las herramientas digitales sean accesibles para personas con discapacidades.">Accesibilidad en Teletrabajo</li>
+                </ul>
+                <div class="definition-box" id="definitionBox">
+                    <p id="definitionText"></p>
+                    <button onclick="closeDefinition()">Cerrar</button>
+                </div>
+            </section>
+            
+        </section>
+    </main>
+
+    <!-- Footer dynamically loaded -->
+    <script src="../Js/footer.js"></script>
+
+    <!-- Script ¿Que es Teletrabajo? -->
+
+    <script>
+        // Mostrar el quizz
+        document.getElementById('start-quiz-btn').addEventListener('click', function () {
+            document.getElementById('teletrabajo-text').style.display = 'none';
+            document.getElementById('teletrabajo-quiz').style.display = 'block';
+        });
+
+        // Manejar respuestas del quizz
+        document.querySelectorAll('.quiz-answer').forEach(button => {
+            button.addEventListener('click', function () {
+                const correct = this.getAttribute('data-correct') === 'true';
+                const feedback = this.parentElement.querySelector('.feedback');
+                feedback.textContent = correct 
+                    ? '¡Correcto! Bien hecho.' 
+                    : 'Incorrecto. Revisa el texto para aprender más.';
+                feedback.className = correct ? 'feedback correct' : 'feedback incorrect';
+            });
+        });
+
+        // Restaurar texto inicial
+        document.getElementById('finish-quiz-btn').addEventListener('click', function () {
+            document.getElementById('teletrabajo-quiz').style.display = 'none';
+            document.getElementById('teletrabajo-text').style.display = 'block';
+        });
+    </script>
+    <script>
+            // Función para mostrar el enlace de más información
+        function showMoreInfo(id) {
+                // Selecciona el div con el ID correspondiente
+            const info = document.getElementById(id);
+    
+                // Alterna la visibilidad del enlace
+            if (info.style.display === "none" || info.style.display === "") {
+                   info.style.display = "block";
+            } else {
+                    info.style.display = "none";
+            }
+        }
+    </script>
+
+                <!-- SCRIPT ROLES -->
+    <script>
+        document.querySelectorAll('.interactive-point').forEach(point => {
+            point.addEventListener('click', function (event) {
+                const tooltip = document.getElementById('tooltip');
+                
+                // Cambia el contenido del tooltip con el atributo data-info del punto seleccionado
+                tooltip.textContent = this.getAttribute('data-info');
+                
+                // Muestra el tooltip y lo posiciona cerca del punto interactivo
+                const rect = this.getBoundingClientRect();
+                tooltip.style.display = 'block';
+                tooltip.style.top = `${window.scrollY + rect.top - tooltip.offsetHeight - 10}px`; // Posiciona el tooltip arriba del punto
+                tooltip.style.left = `${window.scrollX + rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`; // Centra el tooltip horizontalmente sobre el punto
+
+                // Detiene la propagación del evento para que el clic en el punto no cierre el tooltip
+                event.stopPropagation();
+            });
+        });
+
+        // Oculta el tooltip si se hace clic fuera de los puntos interactivos
+        document.addEventListener('click', function () {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'none';
+        });
+
+
+    </script>
+
+    <!-- Script RUEDA -->
+
+    <script>
+        // Selecciona todos los sectores y el contenedor de información
+        document.querySelectorAll('.sector').forEach(sector => {
+            sector.addEventListener('click', function() {
+                // Cambia el texto de .wheel-info según la herramienta seleccionada
+                const infoBox = document.getElementById('wheel-info');
+                infoBox.textContent = this.getAttribute('data-info');
+            });
+        });
+
+    </script>
+
+    <!-- Script DROPDOWN -->
+     <script>
+        // Selecciona todos los botones de dropdown
+        document.querySelectorAll('.dropdown-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Selecciona el contenido asociado al botón
+                const content = button.nextElementSibling;
+
+                // Alterna la visibilidad del contenido
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    
+     </script>
+
+    <!-- Script GLOSARIO -->
+     <script>
+        // Selecciona todos los términos del glosario
+            const glossaryItems = document.querySelectorAll('.glossary-item');
+            const definitionBox = document.getElementById('definitionBox');
+            const definitionText = document.getElementById('definitionText');
+
+            // Agrega el evento de clic a cada término del glosario
+            glossaryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Muestra la definición correspondiente en el cuadro de definición
+                    definitionText.textContent = item.getAttribute('data-definition');
+                    definitionBox.style.display = 'block';
+                });
+            });
+
+            // Cierra el cuadro de definición
+            function closeDefinition() {
+                definitionBox.style.display = 'none';
+            }
+
+     </script>
+
+<!-- Sección para Créditos -->
+<section id="creditos" style="margin: 50px auto; text-align: center; font-family: Arial, sans-serif;">
+    <h2 style="color: #004d40; font-size: 2.5rem; margin-bottom: 10px;">Desarrolladores</h2>
+    <p style="color: #555; font-size: 1.2rem; margin-bottom: 30px;">
+        Esta página fue codificada con esfuerzo y dedicación por nuestro equipo de desarrollo:
+    </p>
+    <!-- Contenedor de Cristian y Mateo -->
+    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+        <!-- Tarjeta de Cristian -->
+        <div style="background: #d2fffd; padding: 20px; border-radius: 10px; width: 200px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #00796b; font-size: 1.5rem;">Cristian Delgado Melo</h3>
+            <p style="color: #555; font-size: 1rem; margin-top: 10px;">Programador Front-End</p>
+        </div>
+        <!-- Tarjeta de Mateo -->
+        <div style="background: #caf9ff; padding: 20px; border-radius: 10px; width: 200px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #a30000; font-size: 1.5rem;">Mateo Ortiz Ramirez</h3>
+            <p style="color: #555; font-size: 1rem; margin-top: 10px;">Programador Front-End</p>
+        </div>
+    </div>
+    <!-- Contenedor de Juan Andrés -->
+    <div style="margin-top: 20px;">
+        <!-- Tarjeta de Juan Andrés -->
+        <div style="background: #c1e9ff; padding: 20px; border-radius: 10px; width: 200px; margin: 0 auto; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+            <h3 style="color: #303f9f; font-size: 1.5rem;">Juan Andrés  García Fuente</h3>
+            <p style="color: #555; font-size: 1rem; margin-top: 10px;">Programador Front-End</p>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>

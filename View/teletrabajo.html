@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teletrabajo: Así se Inicia</title>
+    <link rel="stylesheet" href="../CSS/teletrabajo.css">
+</head>
+<body>
+
+    <div id="background-slider">
+        <div class="background-slide" style="background-image: url('../Img/slide1.png');"></div>
+        <div class="background-slide" style="background-image: url('../Img/slide2.png');"></div>
+        <div class="background-slide" style="background-image: url('../Img/slide3.png');"></div>
+        <!-- Añade más imágenes de fondo aquí -->
+    </div>
+
+    <!-- Header cargado dinámicamente -->
+    <header id="header-container"></header>
+
+ <!-- Sección de introducción -->
+    <section id="intro">
+        <h1>¿Qué es el Teletrabajo?</h1>
+        <p>El teletrabajo es una modalidad laboral en la que los empleados pueden desempeñar sus funciones desde fuera de la oficina, aprovechando las Tecnologías de la Información y Comunicación (TIC). Esta forma de trabajo ofrece flexibilidad, reduce el tiempo de desplazamiento y mejora el equilibrio entre la vida personal y profesional.</p>
+        <p>Con el teletrabajo, las empresas pueden reducir sus costos operativos, mientras que los empleados disfrutan de un ambiente de trabajo adaptado a sus necesidades. Existen diferentes modalidades de teletrabajo, tales como:</p>
+        <ul class="teletrabajo-list">
+            <li><strong>Teletrabajo Autónomo:</strong> Es donde los empleados trabajan de manera completamente remota.</li>
+            <li><strong>Teletrabajo Suplementario:</strong> Aquella es una combinación de trabajo remoto y presencial en la oficina.</li>
+            <li><strong>Teletrabajo Móvil:</strong> Se le permite realizar las tareas desde cualquier lugar, sin una ubicación fija.</li>
+        </ul>
+        <p>El teletrabajo se ha convertido en una solución moderna que responde a los desafíos actuales, promoviendo una mayor satisfacción laboral y eficiencia.</p>
+        <img src="../Img/teletrabajo-intro.png" alt="Introducción al teletrabajo">
+    </section>
+
+
+    <!-- Requisitos para Teletrabajar -->
+    <section id="requirements">
+        <h2>Requisitos para Teletrabajar</h2>
+        <div class="requirement-list">
+            
+            <!-- Conexión a Internet -->
+            <div class="requirement-item" onclick="toggleDropdown(this)">
+                <h3>Conexión a Internet</h3>
+                <ul class="dropdown">
+                    <li onclick="showPreview('../Img/spedtest.png', 'https://www.speedtest.net', 'Speedtest evalúa la velocidad de descarga, carga y ping de tu conexión a Internet para medir su rendimiento en tiempo real.')">
+                        <span>Verificar Velocidad de Internet</span>
+                    </li>
+                    <li onclick="showPreview('../Img/estabilidadaconex.png', 'https://youtu.be/8N9NqQfiZGU?si=rQBOp47aQHJRvx6V', 'Consejos para mejorar la estabilidad de tu conexión de red en casa.')">
+                        <span>Mejorar Estabilidad de Conexión</span>
+                    </li>
+                    <li onclick="showPreview('../Img/optimizarred.png', 'https://garza.es/blogs/noticias/configurar-red-domestica', 'Optimiza tu red WiFi doméstica para obtener una mejor cobertura y velocidad.')">
+                        <span>Optimizar Red Doméstica</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Equipo de Trabajo -->
+            <div class="requirement-item" onclick="toggleDropdown(this)">
+                <h3>Equipo de Trabajo</h3>
+                <ul class="dropdown">
+                    <li onclick="showPreview('../Img/hardware.png', 'https://youtu.be/DUKEBfaDCKo?si=Pd5Is62pou8_a4CM', 'Recomendaciones de hardware para teletrabajar de manera eficiente.')">
+                        <span>Recomendaciones de Hardware</span>
+                    </li>
+                    <li onclick="showPreview('../Img/configuracion.png', 'https://acortar.link/DZ3rqi', 'Configuración de computador para optimizar tu flujo de trabajo.')">
+                        <span>Configuración de Software</span>
+                    </li>
+                    <li onclick="showPreview('../Img/mantenimiento.png', 'https://www.kaspersky.es/blog/remote-work-security/22229/', 'Consejos de mantenimiento y seguridad para tu equipo de trabajo.')">
+                        <span>Mantenimiento y Seguridad</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Espacio de Trabajo -->
+            <div class="requirement-item" onclick="toggleDropdown(this)">
+                <h3>Espacio de Trabajo</h3>
+                <ul class="dropdown">
+                    <li onclick="showPreview('../Img/ergonomiatl.png', 'https://youtu.be/1CAEfJmrESw?si=3YbJcyHt7YPVETkJ', 'Guía para mantener una postura ergonómica durante el teletrabajo.')">
+                        <span>Ergonomía</span>
+                    </li>
+                    <li onclick="showPreview('../Img/distracciones.png', 'https://youtu.be/x2caFEUK6zg?si=DdoBhsZh5BAWAa5A', 'Cómo eliminar distracciones para mejorar tu concentración.')">
+                        <span>Eliminación de Distracciones</span>
+                    </li>
+                    <li onclick="showPreview('../Img/iluminacionsonido.png', 'https://acortar.link/tgi5sH', 'Ajustes de iluminación y sonido para un ambiente de trabajo óptimo.')">
+                        <span>Iluminación y Sonido</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Organización Personal -->
+            <div class="requirement-item" onclick="toggleDropdown(this)">
+                <h3>Organización Personal</h3>
+                <ul class="dropdown">
+                    <li onclick="showPreview('../Img/gestiontiempo.png', 'https://youtu.be/2vXB24qZeIs?si=SoXfqrclxOlYLbfF', 'Técnicas para una gestión eficaz del tiempo en teletrabajo.')">
+                        <span>Gestión del Tiempo</span>
+                    </li>
+                    <li onclick="showPreview('../Img/productidad.png', 'https://youtu.be/qZaRKCaCG6w?si=UIEYR8R5t2oGdyu4', 'Consejos para mantener alta productividad mientras trabajas desde casa.')">
+                        <span>Productividad</span>
+                    </li>
+                    <li onclick="showPreview('../Img/rutinas.png', 'https://acortar.link/zuCXO8', 'La importancia de establecer rutinas y desconexión al final del día.')">
+                        <span>Rutinas y Desconexión</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal para vista previa -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <span id="preview-modal-close" class="close" onclick="closePreviewModal()">&times;</span>
+            <img id="preview-image" src="" alt="Vista previa">
+            <p id="preview-description"></p> <!-- Descripción del enlace -->
+            <button id="open-link" onclick="openLink()">Ir al Sitio</button>
+        </div>
+    </div>
+
+    <!-- Modal para YouTube o iframe de otros sitios -->
+    <div id="iframe-modal" class="modal">
+        <div class="modal-content">
+            <span id="iframe-modal-close" class="close" onclick="closeIframeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <iframe id="modal-iframe" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Herramientas y plataformas útiles -->
+    <section id="tools">
+        <h2><strong>Herramientas y plataformas útiles</strong></h2>
+        <div class="slider">
+            
+            <!-- Zoom -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/zoom.jpg" alt="Zoom">
+                <p><strong>Zoom:</strong>Plataforma de videoconferencia ideal para reuniones virtuales.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('zoom', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('zoom', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://zoom.us/download', '_blank')">Descargar</button>
+                </div>
+                <div id="zoom-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Zoom?</strong> Zoom permite realizar videollamadas y compartir pantalla de forma sencilla. Para usar Zoom, crea una cuenta, inicia una reunión y comparte el enlace con otros para que se unan.</p>
+                </div>
+                <div id="zoom-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Zoom:</strong> Alta calidad de video, chat integrado, opciones de grabación, y salas de espera para un control adecuado de los asistentes.</p>
+                </div>
+            </div>
+
+            <!-- Slack -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/slack.jpg" alt="Slack">
+                <p><strong>Slack:</strong> Herramienta de mensajería y organización de trabajo en equipo.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('slack', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('slack', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://slack.com/downloads', '_blank')">Descargar</button>
+                </div>
+                <div id="slack-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Slack?</strong> Slack permite crear canales para organizar conversaciones, compartir archivos, y realizar videollamadas. Es ideal para la comunicación en equipo y la colaboración en proyectos.</p>
+                </div>
+                <div id="slack-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Slack:</strong> Facilita la comunicación en equipo, organiza las conversaciones por temas, integra con otras herramientas como Google Drive, y ofrece opciones para personalizar las notificaciones.</p>
+                </div>
+            </div>
+
+            <!-- Trello -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/trello.png" alt="Trello">
+                <p><strong>Trello:</strong> Organizador de proyectos que facilita la gestión de tareas.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('trello', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('trello', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://trello.com/en/download', '_blank')">Descargar</button>
+                </div>
+                <div id="trello-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Trello?</strong> Trello utiliza tableros, listas y tarjetas para organizar y priorizar tareas y proyectos. Puedes agregar etiquetas, fechas de vencimiento y colaboradores a cada tarjeta.</p>
+                </div>
+                <div id="trello-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Trello:</strong> Visualización clara del flujo de trabajo, fácil colaboración, y opciones de integración con otras aplicaciones de productividad.</p>
+                </div>
+            </div>
+
+            <!-- Google Drive -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/google.png" alt="Google Drive">
+                <p><strong>Google Drive:</strong> Almacenamiento en la nube y trabajo colaborativo.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('drive', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('drive', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://www.google.com/drive/download/', '_blank')">Descargar</button>
+                </div>
+                <div id="drive-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Google Drive?</strong> Google Drive permite almacenar archivos en la nube y compartirlos con otros para la colaboración en tiempo real. Puedes acceder a tus archivos desde cualquier dispositivo.</p>
+                </div>
+                <div id="drive-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Google Drive:</strong> Espacio de almacenamiento gratuito, fácil de compartir y colaborar, y se integra con Google Docs, Sheets, y otras herramientas de Google.</p>
+                </div>
+            </div>
+
+            <!-- Notion -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/notion.png" alt="Notion">
+                <p><strong>Notion:</strong> Plataforma para la organización y gestión de proyectos.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('notion', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('notion', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://www.notion.so/desktop', '_blank')">Descargar</button>
+                </div>
+                <div id="notion-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Notion?</strong> Notion permite crear páginas, bases de datos, y listas para organizar tu trabajo o proyectos. Puedes personalizar cada página y compartirla con otros colaboradores.</p>
+                </div>
+                <div id="notion-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Notion:</strong> Herramienta todo-en-uno para la organización, personalización avanzada, y capacidad de colaboración en tiempo real.</p>
+                </div>
+            </div>
+
+            <!-- Microsoft Teams -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/teams.jpg" alt="Microsoft Teams">
+                <p><strong>Teams:</strong> Plataforma para videoconferencias y colaboración en equipo.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('teams', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('teams', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://www.microsoft.com/en-us/microsoft-teams/download-app', '_blank')">Descargar</button>
+                </div>
+                <div id="teams-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Microsoft Teams?</strong> Microsoft Teams permite realizar reuniones virtuales, organizar chats y colaboración en tiempo real en documentos compartidos.</p>
+                </div>
+                <div id="teams-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Microsoft Teams:</strong> Integración con Office 365, permite colaboración en tiempo real, ideal para la gestión de proyectos en equipo.</p>
+                </div>
+            </div>
+
+            <!-- Asana -->
+            <div class="slide" onclick="toggleButtons(this)">
+                <img src="../Img/asana.png" alt="Asana">
+                <p><strong>Asana:</strong> Herramienta de gestión de tareas y proyectos para equipos.</p>
+                <div class="button-group">
+                    <button onclick="showInfo('asana', 'usage')">¿Cómo se usa?</button>
+                    <button onclick="showInfo('asana', 'benefits')">Ventajas</button>
+                    <button onclick="window.open('https://asana.com/download', '_blank')">Descargar</button>
+                </div>
+                <div id="asana-usage" class="info-content hidden">
+                    <p><strong>¿Cómo se usa Asana?</strong> Asana permite crear y asignar tareas, establecer fechas límite y organizar proyectos en un solo lugar.</p>
+                </div>
+                <div id="asana-benefits" class="info-content hidden">
+                    <p><strong>Ventajas de Asana:</strong> Ideal para el seguimiento de tareas y gestión de equipos, integración con otras aplicaciones, y permite organizar proyectos visualmente.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer cargado dinámicamente -->
+    <footer id="footer-container"></footer>
+
+    <!-- Scripts para cargar header y footer dinámicamente -->
+    <script src="../Js/header.js"></script>
+    <script src="../Js/footer.js"></script>
+    <script src="../Js/teletrabajo.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Empresa de Construcción</title>
+    <link rel="stylesheet" href="..\CSS\contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <section id="contact-section" class="contact-section">
+        
+        <div class="contact-info">
+            <!-- Imagen de fondo -->
+            <img src="..\Img\contactoPensar1.jpg" alt="Imagen de ayuda">
+            
+            <section id="help-section">
+                <div class="help-content">
+                    <h2>¿Necesitas ayuda con el teletrabajo?</h2>
+                    <p>Si eres instructor y tienes preguntas o necesitas asistencia relacionada con el teletrabajo, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte en lo que necesites.</p>
+                    <button id="contactButton">Enviar un mensaje</button>
+                </div>
+            </section>
+        
+        </div>
+        
+        
+        <div class="contact-details">
+            <h3>Información de contacto</h3>
+            <p><strong>Nuestra oficina</strong><br>Cra 30 # 17b -25 sur, Complejo Sur</p>
+            <p><strong>Horas de oficina</strong><br>Lun-Vie: 8am - 5pm<br>Sáb: 10am - 2pm</p>
+            <p><strong>Contáctanos</strong><br>tyt9215@sena.edu.co<br>Bogotá: +(57) 601 7366060</p>
+            <div class="social-links">
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="contactForm" class="contact-form hidden">
+        <h3>Enviar un mensaje</h3>
+    
+        <!-- Nombre -->
+        <label for="name">Tu nombre:</label>
+        <input type="text" id="name" placeholder="Tu nombre">
+    
+        <!-- Correo Electrónico -->
+        <label for="email">Tu correo electrónico:</label>
+        <input type="email" id="email" placeholder="Tu correo electrónico">
+    
+        <!-- Mensaje -->
+        <label for="message">Tu mensaje:</label>
+        <textarea id="message" placeholder="Tu mensaje"></textarea>
+    
+        <!-- Centro al que pertenece (Lista de opciones) -->
+        <label for="center">Centro al que pertenece:</label>
+        <select id="center">
+            <option value="">Selecciona el centro al que perteneces</option>
+            <option value="CENTRO DE DISEÑO Y METROLOGÍA">CENTRO DE DISEÑO Y METROLOGÍA</option>
+            <option value="CENTRO DE ELECTRICIDAD, ELECTRÓNICA Y TELECOMUNICACIONES">CENTRO DE ELECTRICIDAD, ELECTRÓNICA Y TELECOMUNICACIONES</option>
+            <option value="CENTRO DE FORMACIÓN DE TALENTO HUMANO EN SALUD">CENTRO DE FORMACIÓN DE TALENTO HUMANO EN SALUD</option>
+            <option value="CENTRO DE GESTIÓN ADMINISTRATIVA">CENTRO DE GESTIÓN ADMINISTRATIVA</option>
+            <option value="CENTRO DE GESTIÓN DE MERCADOS, LOGÍSTICA Y TIC'S">CENTRO DE GESTIÓN DE MERCADOS, LOGÍSTICA Y TIC'S</option>
+            <option value="CENTRO DE GESTIÓN INDUSTRIAL">CENTRO DE GESTIÓN INDUSTRIAL</option>
+            <option value="CENTRO DE FORMACIÓN EN ACTIVIDAD FÍSICA Y CULTURA">CENTRO DE FORMACIÓN EN ACTIVIDAD FÍSICA Y CULTURA</option>
+            <option value="CENTRO DE MANUFACTURAS EN TEXTILES Y CUERO">CENTRO DE MANUFACTURAS EN TEXTILES Y CUERO</option>
+            <option value="CENTRO DE MATERIALES Y ENSAYOS">CENTRO DE MATERIALES Y ENSAYOS</option>
+            <option value="CENTRO DE SERVICIOS FINANCIEROS">CENTRO DE SERVICIOS FINANCIEROS</option>
+            <option value="CENTRO DE TECNOLOGÍAS DE TRANSPORTE">CENTRO DE TECNOLOGÍAS DE TRANSPORTE</option>
+            <option value="CENTRO DE TECNOLOGÍAS PARA LA CONSTRUCCIÓN Y LA MADERA">CENTRO DE TECNOLOGÍAS PARA LA CONSTRUCCIÓN Y LA MADERA</option>
+            <option value="CENTRO METALMECÁNICO">CENTRO METALMECÁNICO</option>
+            <option value="CENTRO NACIONAL DE HOTELERÍA, TURISMO Y ALIMENTOS">CENTRO NACIONAL DE HOTELERÍA, TURISMO Y ALIMENTOS</option>
+            <option value="CENTRO PARA LA INDUSTRIA DE LA COMUNICACIÓN GRÁFICA">CENTRO PARA LA INDUSTRIA DE LA COMUNICACIÓN GRÁFICA</option>
+        </select>
+    
+        <!-- Formación que imparte (Pregunta abierta) -->
+        <label for="training">Formación que imparte:</label>
+        <input type="text" id="training" placeholder="Especifica la formación (Ej. Técnico en Desarrollo Web)">
+    
+        <button onclick="submitForm()">Enviar</button>
+    </div>
+    
+    
+    
+
+    <!-- Mensaje de Confirmación -->
+    <div id="contactMessage" class="contact-message hidden"></div>
+
+    
+
+    <script>
+     // Mostrar/Ocultar formulario con animación
+document.getElementById('contactButton').addEventListener('click', function() {
+    const contactForm = document.getElementById('contactForm');
+    // Alternar clases para mostrar u ocultar el formulario con animación
+    contactForm.classList.toggle('hidden');
+    contactForm.classList.toggle('visible');
+});
+
+// Función para enviar el formulario
+function submitForm() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const center = document.getElementById('center').value;
+    const training = document.getElementById('training').value;
+    const contactMessage = document.getElementById('contactMessage');
+
+    // Verificar si todos los campos están completos
+    if (name && email && message && center && training) {
+        // Mensaje de éxito
+        contactMessage.textContent = '¡Tu mensaje ha sido enviado!';
+        contactMessage.classList.remove('hidden', 'error');
+        contactMessage.classList.add('success');
+        
+        // Ocultar el formulario después de enviar
+        document.getElementById('contactForm').classList.add('hidden');
+        
+        // Limpiar los campos del formulario
+        document.getElementById('name').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('message').value = '';
+        document.getElementById('center').value = '';
+        document.getElementById('training').value = '';
+        
+        // Mostrar el mensaje de éxito y ocultarlo después de 2 segundos
+        contactMessage.classList.add('visible');
+        setTimeout(function() {
+            contactMessage.classList.remove('visible');
+            contactMessage.classList.add('hidden');
+        }, 2000); // El mensaje se oculta después de 2 segundos
+    } else {
+        // Mensaje de error si no se completaron todos los campos
+        contactMessage.textContent = 'Por favor, completa todos los campos.';
+        contactMessage.classList.remove('hidden', 'success');
+        contactMessage.classList.add('error');
+
+        // Mostrar el mensaje de error y ocultarlo después de 2 segundos
+        contactMessage.classList.add('visible');
+        setTimeout(function() {
+            contactMessage.classList.remove('visible');
+            contactMessage.classList.add('hidden');
+        }, 2000); // El mensaje se oculta después de 2 segundos
+    }
+}
+
+// Si quieres cerrar el formulario cuando se haga clic fuera de él
+window.addEventListener('click', function(e) {
+    const contactForm = document.getElementById('contactForm');
+    if (e.target === contactForm) {
+        contactForm.classList.remove('visible');
+        contactForm.classList.add('hidden');
+    }
+});
+// Seleccionar todos los campos de entrada, textarea y select dentro del formulario
+const inputs = document.querySelectorAll('.contact-form input, .contact-form textarea, .contact-form select');
+
+    </script>
+
+    <script src="../Js/header.js"></script>
+    <script src="../Js/footer.js"></script>
+
+</body>
+</html>

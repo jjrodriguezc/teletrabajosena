@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/robotic.css">
+    <title>Bienvenido a Nuestro Chat de Teletrabajo</title>
+    
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bienvenido a Nuestro Chat de Teletrabajo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+<div id="myLandbot" style="width: 100%; height: 800px"></div>
+<script>
+var myLandbot = new Landbot.Container({
+    container: '#myLandbot',
+    configUrl: 'https://storage.googleapis.com/landbot.site/v3/H-2682252-CM260HLJ3D1R8QNT/index.json',
+});
+</script>
+<div class="container">
+    <div class="welcome-section">
+        <h1 id="greeting">Bienvenido a Nuestro Chat de Teletrabajo</h1>
+        <p>
+            Este espacio está diseñado para ayudarte con todo lo relacionado al teletrabajo. Aquí podrás encontrar información útil sobre cómo empezar en el teletrabajo, el programa MinTIC, pausas activas, ergonomía y más.
+        </p>
+        <p>
+            Explora y descubre cómo mejorar tu experiencia de trabajo remoto con nuestros recursos y consejos personalizados.
+        </p>
+    </div>
+
+    <h2>Ventajas de Utilizar Nuestro Chat</h2>
+    <div class="advantages">
+        <ul>
+            <li>
+                <i class="fas fa-user-friends"></i>
+                <strong>Asesoría Personalizada:</strong> Respuestas a tus preguntas sobre teletrabajo y recomendaciones personalizadas.
+            </li>
+            <li>
+                <i class="fas fa-clock"></i>
+                <strong>Ahorro de Tiempo:</strong> Información clara y rápida sin navegar por múltiples páginas.
+            </li>
+            <li>
+                <i class="fas fa-book"></i>
+                <strong>Recursos Útiles:</strong> Acceso a herramientas, consejos y recomendaciones para mejorar tu experiencia de teletrabajo.
+            </li>
+            <li>
+                <i class="fas fa-heart"></i>
+                <strong>Bienestar en el Trabajo:</strong> Tips de ergonomía y pausas activas para mantener un estilo de vida saludable.
+            </li>
+        </ul>
+    </div>
+</div>
+
+    
+        
+        <div id="welcome-popup" class="popup-welcome" style="display: none;">
+            ¡Hola! ¿Tienes preguntas sobre teletrabajo, pausas activas o ergonomía? Nuestro chat está aquí para ayudarte 😊.
+        </div>
+    
+        
+        <script>
+            
+            function setGreeting() {
+                const greeting = document.getElementById("greeting");
+                const hour = new Date().getHours();
+                let greetingText = "Bienvenido a Nuestro Chat de Teletrabajo";
+    
+                if (hour < 12) {
+                    greetingText = "Buenos Días y Bienvenidx a nuestro Chat de Teletrabajo";
+                } else if (hour < 18) {
+                    greetingText = "Buenas Tardes y Bienvenidx a nuestro Chat de Teletrabajo";
+                } else {
+                    greetingText = "Buenas Noches y Bienvenidx a nuestro Chat de Teletrabajo";
+                }
+                greeting.textContent = greetingText;
+            }
+    
+            function showWelcomePopup() {
+                const popup = document.getElementById("welcome-popup");
+                popup.style.display = "block";
+                setTimeout(() => {
+                    popup.style.display = "none";
+                }, 6000); 
+            }
+    
+            window.onload = function() {
+                setGreeting();
+                showWelcomePopup();
+            }
+        </script>
+    </body>
+    </html>
+    
+
+    <script src="../Js/header.js"></script>
+    <script src="../Js/footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normatividad del Teletrabajo</title>
+    <link rel="stylesheet" href="../CSS/normativa.css">
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+</head>
+<body>
+    <header>
+        <h1>Normatividad del Teletrabajo</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav class="nav2">
+            <ul>
+                <li><a href="#linea-tiempo">Línea de Tiempo</a></li>
+                <li><a href="#quiz">Quiz Interactivo</a></li>
+                <li><a href="#mapa">Mapas Infográficos</a></li>
+                <li><a href="#simulador">Simulador de Contrato</a></li>
+                <li><a href="#casos-practicos">Casos Prácticos</a></li>
+                <li><a href="#videos">Videos Explicativos</a></li>
+                <li><a href="#calculadora">Calculadora de Beneficios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="linea-tiempo">
+            <h2>Línea de Tiempo Interactiva</h2>
+            <section id="timeline">
+                <h2>Línea de Tiempo</h2>
+                <div class="timeline-container">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2008</h3>
+                            <p>Aprobación de la Ley 1221, que regula el teletrabajo en Colombia.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2012</h3>
+                            <p>El MinTIC impulsa políticas para fomentar el teletrabajo como una modalidad laboral.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2018</h3>
+                            <p>Actualización de normativas sobre teletrabajo para incluir beneficios fiscales.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2020</h3>
+                            <p>Incremento masivo del teletrabajo debido a la pandemia de COVID-19.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <p>Promoción del trabajo híbrido como nueva tendencia laboral.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="timeline-embed" style="width: 100%; height: 600px;"><script>
+                
+                const timelineJson = "../Controller/timeline-data.json";
+                window.timeline = new TL.Timeline("timeline-embed", timelineJson, {
+                    language: 'es', 
+                    start_at_end: true,
+                    height: '600' 
+                });
+            </script>
+            </div>
+
+                
+            </div>
+        </section>
+        
+        <section id="quiz">
+            <h2>Quiz Interactivo</h2>
+            <div id="quiz-container">
+                <script SameSite="None; Secure" src="https://cdn.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+                    <div id="myLandbot" style="width: 100%; height: 600px"></div>
+<script>
+var myLandbot = new Landbot.Container({
+    container: '#myLandbot',
+    configUrl: 'https://storage.googleapis.com/landbot.site/v3/H-2683318-39JM5KUWKX8V2FLA/index.json',
+});
+</script>
+            </div>
+        </section>
+        
+        <section id="mapa">
+            <h2>Mapas Infográficos de Cobertura Legal</h2>
+            <!-- Código para los mapas infográficos -->
+            <div id="map">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([4.5709, -74.2973], 6);  // Coordenadas de Colombia
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        
+        var marker = L.marker([4.60971, -74.08175]).addTo(map);
+        marker.bindPopup("<b>Teletrabajo en Bogotá</b><br>Normativas locales y beneficios.").openPopup();
+        
+         // Marcadores para diferentes ciudades en Colombia
+         var markers = [
+            {
+                "lat": 4.60971,
+                "lng": -74.08175,
+                "city": "Bogotá",
+                "info": "Capital de Colombia, centro de gran parte del teletrabajo en el país."
+            },
+            {
+                "lat": 6.25184,
+                "lng": -75.56359,
+                "city": "Medellín",
+                "info": "Medellín ha sido pionera en la adopción de teletrabajo, especialmente en la tecnología."
+            },
+            {
+                "lat": 3.43722,
+                "lng": -76.5225,
+                "city": "Cali",
+                "info": "Cali también ha incrementado el teletrabajo en sectores de servicios y tecnología."
+            },
+            {
+                "lat": 10.96389,
+                "lng": -74.79694,
+                "city": "Barranquilla",
+                "info": "Barranquilla ha comenzado a experimentar un crecimiento en el teletrabajo en el sector industrial."
+            },
+            {
+                "lat": 5.0675,
+                "lng": -75.5174,
+                "city": "Manizales",
+                "info": "Manizales es otro punto de crecimiento de teletrabajo, especialmente en el sector educativo."
+            },
+            {
+                "lat": 7.1315,
+                "lng": -73.1198,
+                "city": "Bucaramanga",
+                "info": "Bucaramanga ha estado implementando el teletrabajo especialmente en el sector financiero."
+            }
+        ];
+
+        // Añadir marcadores al mapa
+        markers.forEach(function(markerData) {
+            var marker = L.marker([markerData.lat, markerData.lng]).addTo(map);
+            marker.bindPopup("<b>" + markerData.city + "</b><br>" + markerData.info);
+        });
+    </script>
+
+            </div>
+        </section>
+        
+        <section id="simulador">
+            <h2>Simulador de Contrato de Teletrabajo</h2>
+            <div id="contract-simulator">
+                <form>
+                    <label for="hours">Horas de Trabajo:</label>
+                    <input type="number" id="hours" name="hours">
+                    <label for="type">Tipo de Teletrabajo:</label>
+                    <select id="type" name="type">
+                        <option value="autonomo">Autónomo</option>
+                        <option value="suplementario">Suplementario</option>
+                        <option value="movil">Móvil</option>
+                    </select>
+                    <label for="equipment">Equipos Utilizados:</label>
+                    <input type="text" id="equipment" name="equipment">
+                    <button type="submit">Generar Contrato</button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="casos-practicos">
+            <h2>Casos Prácticos</h2>
+            
+            <div id="practical-cases">
+                <article>
+                    <h3>Caso 1: Teletrabajo en el Sector de Tecnología – Desarrollador de Software</h3>
+                    <p>Contexto: Juan es un desarrollador de software que trabaja para una empresa de tecnología en Bogotá. Debido a la pandemia, su empresa implementó el teletrabajo como una medida de seguridad. Después de la pandemia, la empresa decidió continuar con el modelo híbrido, permitiendo que los desarrolladores trabajen desde casa tres días a la semana y en la oficina los otros dos.
+
+                        <h3>Normativa Aplicada:</h3>
+                        Derechos: Juan tiene derecho a un horario flexible, siempre y cuando cumpla con las tareas del proyecto. Además, la empresa le proporciona el equipo necesario (computadora, software especializado).
+                        Beneficios: La empresa ofrece subsidios para internet y una parte de los costos de energía, ya que el trabajo remoto se realiza desde su hogar.
+                        Desafíos: Aunque la flexibilidad de horario le permite equilibrar mejor su vida personal y profesional, a veces se siente desconectado de sus compañeros y la comunicación puede ser más lenta.
+                        </p>
+                </article>
+                <article>
+                    <h3>Caso 2: Teletrabajo en el Sector de Educación – Profesor Universitario
+                    </h3>
+                    <p>Caso 2: Teletrabajo en el Sector de Educación – Profesor Universitario
+                        Contexto: Laura es profesora de una universidad en Medellín y desde el inicio de la pandemia, ha estado trabajando desde casa. Durante este tiempo, su universidad implementó clases virtuales. Ahora, después de la crisis sanitaria, Laura ha mantenido su modalidad de trabajo remoto, dictando clases en línea.
+                        
+                        <h3>Normativa Aplicada:</h3>
+                        
+                        Derechos: Laura tiene derecho a recibir el apoyo tecnológico necesario para impartir clases de calidad (computadora portátil, plataforma educativa). La universidad también ofrece capacitación sobre el uso de herramientas digitales.
+                        Beneficios: Aunque no recibe compensaciones por el uso de su propia infraestructura (como el internet y la electricidad), su horario flexible le permite gestionar su tiempo y realizar sus tareas en un entorno tranquilo.
+                        Desafíos: A veces le resulta complicado mantener la atención de los estudiantes, ya que la interacción a través de videoconferencias no es tan dinámica como en el aula tradicional.
+                        </p>
+                </article>
+                
+            </div>
+        </section>
+        
+        <section id="videos">
+            <h2>Videos o Animaciones Explicativas</h2>
+        
+            <div id="video-explainer">
+                
+                <iframe width="678" height="391" src="https://www.youtube.com/embed/t_Y6FZA-1LE" title="¿Qué es el Teletrabajo?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section id="calculadora">
+            <h2>Calculadora de Beneficios</h2>
+            <div id="benefits-calculator">
+                <form>
+                    <!-- Aquí irán los campos del formulario para la calculadora -->
+                    <label for="distance">Distancia al trabajo (km):</label>
+                    <input type="number" id="distance" name="distance">
+                    <label for="days">Días de teletrabajo por semana:</label>
+                    <input type="number" id="days" name="days">
+                    <button type="submit">Calcular Ahorros</button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="testimonios">
+            <h2>Testimonios y Entrevistas en Video</h2>
+            <div id="testimonials">
+                
+                <article>
+                    <h3>El Teletrabajo está aqui para quedarse</h3>
+                    <iframe width="678" height="391" src="https://www.youtube.com/embed/I21Ao1vOAUI" title="El Teletrabajo está aqui para quedarse - entrevista completa con Iñaki Gabilondo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </article>
+                <article>
+                    <h3>Entrevista Viceministra TIC Maria Carolina Hoyos</h3>
+                    <iframe width="678" height="391" src="https://www.youtube.com/embed/q8kjn99DJPo" title="Entrevista Viceministra TIC Maria Carolina Hoyos: Teletrabajo en Colombia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="../Js/header.js"></script>
+    <script src="../Js/footer.js"></script>
+    <script src="/Js/normatividad.js"></script>
+    <script src="/Js/timeline.js"></script>
+
+</body>
+</html>
