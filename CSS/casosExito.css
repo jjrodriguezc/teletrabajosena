@@ -1,0 +1,242 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --verde-institucional: #39A900;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --azul-oscuro: #00304D;
+    --azul-claro: #50E5F9;
+    --amarillo: #FDC300;
+    --violeta: #71277A;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    padding: 0;
+    background-color: var(--blanco);
+}
+
+.casos-exitosos-titulo {
+    text-align: center;
+    color: var(--verde-institucional);
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--azul-oscuro);
+    padding: 10px;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--amarillo);
+}
+
+.titulo {
+    text-align: center;
+    color: var(--verde-institucional);
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.casos-container {
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.casos-fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px; /* Espacio entre las tarjetas horizontalmente */
+    row-gap: 40px; /* Espacio adicional entre las filas (verticalmente) */
+    margin-top: 30px; /* Espacio entre la parte superior y la primera fila de tarjetas */
+}
+
+.caso {
+    width: 350px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.caso:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.caso-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.reseña {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo más oscuro */
+    color: #ffffff; /* Blanco para el texto */
+    padding: 35px 30px; /* Espaciado interno ajustado */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 70%; /* Limitar la altura de la reseña */
+    overflow-y: auto; /* Scroll si el contenido excede el espacio */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 0 0 15px 15px; /* Redondeo solo en la parte inferior */
+    font-size: 0.95rem; /* Tamaño de fuente compacto */
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: justify; /* Justificar el texto */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra interna para destacar */
+}
+
+.caso:hover .reseña {
+    opacity: 1;
+    transform: translateY(0); /* Aparece suavemente */
+}
+
+/* Separadores entre párrafos */
+.reseña p + p {
+    margin-top: 10px;
+}
+
+/* Destacar palabras clave */
+.reseña strong {
+    color: var(--amarillo); /* Amarillo para destacar */
+    font-weight: bold;
+}
+
+/* Botón dentro de la reseña (opcional) */
+.reseña .boton-resena {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background-color: var(--verde-institucional);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.reseña .boton-resena:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* Nombre del instructor */
+.nombre-instructor {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    color: #ffffff; /* Blanco */
+    font-size: 1rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px; /* Ajustar la posición superior */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 0 0 15px 15px;
+}
+
+.caso:hover .nombre-instructor {
+    opacity: 1; /* Aparece en hover */
+    transform: translateY(0);
+}
+
+.caso:hover .caso-imagen {
+    opacity: 0.3;
+}
+
+.caso:hover .reseña {
+    opacity: 1;
+}
+
+.boton-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#verMasButton {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: var(--verde-institucional);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#verMasButton:hover {
+    background-color: var(--amarillo);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hidden-casos {
+    display: none;
+}
+
+.boton-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.ver-mas {
+    background-color: var(--verde-institucional);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.ver-mas:hover {
+    background-color: var(--azul-oscuro);
+}

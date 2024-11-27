@@ -1,0 +1,366 @@
+
+:root {
+    --sena-green: #00304D; /* Verde institucional del SENA */
+    --sena-orange: #f26b21; /* Naranja institucional del SENA */
+    --sena-light-gray: #f5f5f5; /* Gris claro para fondos */
+    --sena-dark-gray: #333333; /* Gris oscuro para textos */
+    --sena-white: #ffffff; /* Blanco puro */
+}
+
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--sena-light-gray);
+    color: var(--sena-dark-gray);
+    line-height: 1,2;
+}
+
+
+header {
+    background-color: var(--sena-green);
+    color: var(--sena-white);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo actualizado para el menú de navegación */
+.nav2 ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* Distribuir enlaces de forma uniforme */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Espaciado entre los elementos */
+}
+
+.nav2 li {
+    flex: 1; /* Hacer que cada elemento ocupe el mismo espacio */
+    text-align: center;
+}
+
+.nav2 a {
+    color: var(--sena-white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    display: block; /* Asegurar que los enlaces ocupen todo el ancho del contenedor */
+}
+
+.nav2 a:hover {
+    background-color: var(--sena-orange);
+    border-radius: 5px;
+}
+
+/* Menú acordeón en dispositivos móviles */
+.nav2 ul {
+    display: none; /* Ocultar el menú por defecto en móvil */
+    flex-direction: column; /* Apilar los elementos verticalmente en móvil */
+    align-items: flex-start; /* Alinea los elementos hacia la izquierda */
+    width: 100%; /* El menú ocupa todo el ancho */
+}
+
+.nav2.active ul {
+    display: flex; /* Mostrar el menú cuando está activo */
+}
+
+/* Mostrar el botón del menú en móviles */
+.menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    background-color: var(--sena-orange);
+    color: var(--sena-white);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Esconder el botón en pantallas grandes */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Esconde el botón de menú en pantallas grandes */
+    }
+    .nav2 ul {
+        display: flex; /* Mostrar menú horizontal en pantallas grandes */
+        flex-direction: row; /* Menú en fila */
+        gap: 20px;
+    }
+}
+
+
+
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: var(--sena-white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+
+section h2 {
+    font-size: 2rem;
+    color: var(--sena-green);
+    border-bottom: 3px solid var(--sena-orange);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form select, form textarea, form button {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--sena-dark-gray);
+}
+
+form button {
+    background-color: var(--sena-orange);
+    color: var(--sena-white);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--sena-green);
+}
+
+.tl-slide-content {
+    background-color: #d0e3ff; /* Cambia el fondo de los eventos */
+}
+.tl-timeline .tl-timegroup-title {
+    color: #007e33; /* Cambia el color de los títulos */
+}
+
+
+#timeline {
+    padding: 20px;
+    background-color: var(--sena-light-gray);
+    border: 2px dashed var(--sena-orange);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#timeline {
+    padding: 40px;
+    background-color: var(--sena-light-gray);
+    border-radius: 10px;
+    position: relative;
+}
+
+
+#timeline h2 {
+    text-align: center;
+    color: var(--sena-green);
+    margin-bottom: 30px;
+}
+
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+    padding-left: 20px;
+    border-left: 4px solid var(--sena-green); 
+}
+
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+
+.timeline-dot {
+    width: 15px;
+    height: 15px;
+    background-color: var(--sena-orange);
+    border-radius: 50%;
+    position: absolute;
+    left: -8px; 
+    top: 0;
+    transform: translateY(-50%);
+    border: 3px solid var(--sena-green);
+}
+
+
+.timeline-content {
+    background-color: var(--sena-white);
+    border: 1px solid var(--sena-green);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.timeline-item:hover .timeline-content {
+    transform: scale(1.05); 
+    background-color: var(--sena-light-gray);
+}
+
+
+.timeline-content h3 {
+    margin-bottom: 10px;
+    color: var(--sena-orange);
+}
+
+.timeline-content p {
+    margin: 0;
+}
+
+.timeline-item.active .timeline-content {
+    background-color: var(--sena-green);
+    color: var(--sena-white);
+}
+
+
+
+#quiz-container {
+    background-color: var(--sena-light-gray);
+    padding: 20px;
+    border: 2px solid var(--sena-orange);
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+#map {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid var(--sena-green);
+}
+
+
+#practical-cases article {
+    background-color: var(--sena-light-gray);
+    border: 1px solid var(--sena-dark-gray);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#practical-cases h3 {
+    color: var(--sena-orange);
+}
+
+
+#video-explainer iframe {
+    border-radius: 10px;
+    border: 3px solid var(--sena-green);
+    width: 100%;
+    max-width: 700px;
+}
+
+
+#benefits-calculator {
+    text-align: center;
+}
+
+
+#discussion-forum .comment {
+    background-color: var(--sena-light-gray);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid var(--sena-green);
+}
+
+#discussion-forum form textarea {
+    min-height: 100px;
+}
+
+
+#legal-consultation iframe {
+    border-radius: 10px;
+    border: 3px solid var(--sena-orange);
+}
+
+#testimonials article {
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 3px solid var(--sena-green);
+
+}
+
+/* General: Contenedor centrado */
+main {
+    max-width: 1200px; /* Define el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espaciado interno */
+    background-color: var(--sena-white); /* Fondo blanco para unificar el diseño */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el contenedor */
+}
+
+/* Secciones internas: Ajustar márgenes */
+section {
+    margin-bottom: 40px; /* Espaciado entre las secciones */
+}
+
+/* Ajustes para los encabezados */
+header {
+    text-align: center; /* Centra el contenido del encabezado */
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--sena-white);
+}
+
+/* Ajusta el contenedor de la línea de tiempo */
+#timeline {
+    max-width: 800px;
+    margin: 20px auto; /* Centra la línea de tiempo */
+}
+
+/* Ajustes para el mapa */
+#map {
+    max-width: 800px;
+    margin: 20px auto; /* Centra el mapa */
+}
+
+/* Ajustes para los videos */
+#video-explainer iframe,
+#testimonials iframe {
+     border-radius: 10px;
+    border: 3px solid var(--sena-green);
+    width: 100%;
+    max-width: 700px;
+}

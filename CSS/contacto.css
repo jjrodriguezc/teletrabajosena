@@ -1,0 +1,529 @@
+:root {
+    --verde-institucional: #39A900;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --azul-oscuro: #00304D;
+    --azul-claro: #50E5F9;
+    --amarillo: #FDC300;
+    --violeta: #71277A;
+}
+
+body, h1, h2, h3, p, a {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--azul-oscuro);
+    padding: 10px;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+#contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco);
+    color: var(--blanco); /* Mantener color blanco en la parte de fondo */
+    padding: 50px;
+    gap: 20px;
+    color: var(--negro);
+    flex-wrap: nowrap; /* Asegura que no se rompa a la siguiente fila */
+}
+
+.contact-info {
+    position: relative;
+    width: 100%;
+    height: 370px; /* Aumentar la altura */
+    overflow: hidden;
+    margin: 0 auto;
+    flex: 1; /* Ocupa espacio restante en la izquierda */
+}
+
+
+.contact-info img {
+    position: absolute; /* Hace que la imagen se posicione en el fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La imagen cubre el área sin deformarse */
+    filter: brightness(0.5); /* Oscurece la imagen para mejorar la visibilidad del texto */
+    z-index: -1; /* Coloca la imagen detrás del texto */
+    transition: transform 0.5s ease-in-out; /* Efecto al hacer hover (si quieres añadirlo) */
+}
+
+#help-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Img/tu-imagen-de-fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.help-content {
+    max-width: 700px;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.help-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #39A900; /* Color verde del título */
+}
+
+.help-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+.contact-info:hover img {
+    transform: scale(1.1); /* Hace zoom en la imagen al pasar el mouse */
+}
+
+.help-content button {
+    background-color: #39A900;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.help-content button:hover {
+    background-color: #2e7c00;
+}
+
+
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#contactButton {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #39A900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#contactButton:hover {
+    background-color: #39A900;
+}
+#contactButton:active {
+    transform: translateY(2px); /* Hace que el botón baje un poco cuando se hace clic */
+}
+
+
+.vertical-bar {
+    width: 4px;
+    height: 40px; /* Ajusta el alto de la barra */
+    background-color: var(--verde-institucional);
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact-info button {
+    background-color: var(--verde-institucional);
+    color: var(--blanco);
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-info button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.contact-details {
+    background-color: var(--verde-institucional); /* Fondo verde institucional */
+    color: var(--blanco); /* Texto blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    width: 25%; /* La parte de Información de contacto ocupa un cuarto de la página */
+    min-width: 250px; /* Asegura que no se haga muy pequeño */
+    margin-left: auto; 
+}
+
+.contact-details h3 {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-details p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.contact-details p strong {
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--amarillo); /* Cambia a amarillo al pasar el mouse */
+}
+
+.social-links a:active {
+    color: var(--violeta); /* Cambia al color violeta cuando se hace clic */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del contenedor del formulario */
+.contact-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor del formulario */
+    width: 100%;
+    font-family: 'Arial', sans-serif; /* Asegúrate de que todos tengan la misma fuente */
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    border: 2px solid #39A900;  /* Borde azul alrededor del formulario */
+    margin-bottom: 150px;
+}
+
+/* Estilo para los campos de entrada */
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+/* Cuando un campo recibe el enfoque (es seleccionado) */
+.contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
+    border-color: #3498db;  /* Color de borde cuando el campo está seleccionado */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.8);  /* Sombra alrededor del campo */
+}
+
+
+.contact-form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;  /* Animación suave para el cambio de color y sombra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra suave por defecto */
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;  /* Cambio de color al pasar el cursor */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);  /* Sombra más grande al pasar el cursor */
+}
+
+
+/* Estilo para los mensajes */
+.contact-message.success {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact-message.error {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact-message.hidden {
+    display: none;
+}
+
+.contact-message.visible {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animación de aparición del mensaje de confirmación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Para que el formulario no se vea "teletransportado" */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.contact-section {
+    position: relative;
+    z-index: 1;  /* Asegura que el contenido del formulario esté sobre el slider */
+    padding: 100px 20px; /* Ajusta el padding según lo necesites */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que los elementos se ajusten en dispositivos pequeños */
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: var(--verde-institucional);
+    margin-bottom: 20px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 600px; /* Limita el tamaño máximo */
+    margin: 20px auto; /* Centra el formulario */
+    padding: 20px; /* Espaciado interno */
+}
+
+.contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid var(--azul-oscuro);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--verde-institucional);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--verde-institucional);
+    color: var(--blanco);
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--azul-oscuro);
+}
+
+.contact-form button:active {
+    transform: scale(0.98);
+}
+
+.contact-message {
+    position: fixed;
+    top: 15%; /* Ajusta la distancia desde la parte superior */
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px); /* Hace que empiece un poco más arriba */
+    padding: 15px 25px;
+    background-color: var(--amarillo);
+    color: var(--negro);
+    border-radius: 8px; /* Bordes redondeados para suavizar el estilo */
+    font-size: 1.2rem;
+    text-align: center;
+    display: none;
+    z-index: 1000; /* Asegura que se muestre por encima de otros elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra suave para resaltar el mensaje */
+    opacity: 0; /* Inicialmente invisible */
+    transition: all 0.3s ease-out; /* Animación suave */
+}
+
+.contact-message.success {
+    background-color: var(--verde-institucional);
+    color: var(--blanco);
+}
+
+.contact-message.error {
+    background-color: var(--violeta);
+    color: var(--blanco);
+}
+
+.contact-message.visible {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Animación de entrada (se mueve hacia abajo) */
+}
+
+.contact-message.hidden {
+    display: none;
+}
+
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mostrar la animación cuando el formulario se vuelve visible */
+.contact-form.visible {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column; /* Apila los enlaces verticalmente */
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0; /* Espacio entre los elementos del menú */
+    }
+
+    #contact-section {
+        padding: 10px; /* Reduce el espacio */
+    }
+
+    .contact-info {
+        height: 250px; /* Reduce la altura */
+    }
+
+    .help-content h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    }
+
+    .help-content p {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+
+    .help-content button {
+        padding: 0.5rem 1rem; /* Reduce el tamaño del botón */
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+    }
+
+    .contact-form {
+        padding: 15px; /* Reduce el espacio interno */
+        max-width: 100%; /* Usa todo el ancho disponible */
+    }
+}
+
+
+@media (max-width: 768px) {
+    #contact-section {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        padding: 20px; /* Reduce el espacio */
+    }
+
+    .contact-info {
+        height: auto; /* Permite altura dinámica */
+        margin-bottom: 20px; /* Espacio entre elementos */
+    }
+
+    .help-content {
+        padding: 1.5rem;
+        max-width: 90%; /* Limita el ancho en pantallas medianas */
+    }
+
+    .help-content h2 {
+        font-size: 1.8rem; /* Ajusta el tamaño del texto */
+    }
+
+    .help-content p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+    }
+}
+
+
+

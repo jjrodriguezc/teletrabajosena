@@ -1,0 +1,477 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos generales para la página de Teletrabajo */
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+
+}
+
+section {
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Aplica el color verde solo a h1 y h2 dentro del contenido principal, excluyendo el footer */
+section h1, section h2 {
+    color: #39A900;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/* Mantén el color original en el footer */
+footer h1, footer h2 {
+    color: inherit; /* Usa el color heredado en el footer */
+}
+
+#intro img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 1em auto;
+}
+
+.requirement-list {
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.requirement-item {
+    background-color: #e9f5ea;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    gap: 1em;
+    padding-top: 1em;
+    position: relative;
+}
+
+.slide {
+    min-width: 200px;
+    background-color: #f4f4f9;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.slide img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+ul li {
+    padding: 0.5em 0;
+    font-size: 1em;
+}
+
+#tips ul {
+    max-width: 600px;
+    margin: auto;
+}
+
+#templates ul {
+    max-width: 600px;
+    margin: auto;
+}
+
+#templates li a {
+    color: #00304D;
+    text-decoration: none;
+}
+
+#templates li a:hover {
+    color: #39A900;
+    text-decoration: underline;
+}
+
+/* SECCION REQUESITOS */
+
+/* Estilos para la sección de requisitos */
+#requirements {
+    padding: 2em;
+    text-align: center;
+}
+
+#requirements h2 {
+    background-color: #e9f5ea;
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 2em;
+    color: #39A900;
+    margin-bottom: 1em;
+    transform: scale(1.1);  /* Expansión ligera */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);  /* Sombreado suave */
+}
+
+.requirement-list {
+    margin: 2em 0;
+}
+
+.requirement-item h3 {
+    cursor: pointer;
+    color: #39A900;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}
+
+/* Estilos para la lista desplegable de cada requisito */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+
+.dropdown li {
+
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5em;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#preview-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#preview-description {
+    font-size: 1em;
+    color: #555;
+    margin: 15px 0; /* Añade espacio entre la imagen y el botón */
+}
+
+#open-link {
+    background-color: #39A900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#open-link:hover {
+    background-color: #2d7f00;
+}
+
+/* HERRAMIENTAS */
+
+/* Estilos para Herramientas */
+#tools {
+    padding: 2em;
+    text-align: center;
+
+}
+
+#tools h2 {
+    font-size: 2em;
+    color: #39A900;
+    margin-bottom: 1em;
+    background-color: #e9f5ea;
+    padding: 1em;
+    border-radius: 8px;
+    transform: scale(1.1);  /* Expansión ligera */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);  /* Sombreado suave */
+}
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.slide {
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.slide img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.slide p {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.button-group button {
+    background-color: #39A900;
+    color: #fff;
+    border: none;
+    padding: 0.6em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.button-group button:hover {
+    background-color: #2e7c00;
+}
+
+.info-content {
+    background-color: #e9f5ea;
+    color: #333;
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 1em;
+    display: none; /* Oculto por defecto */
+    text-align: left;
+}
+
+.info-content p {
+    font-size: 0.9em;
+}
+
+#tools .slider {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.slide img {
+    width: 150px;  /* Tamaño uniforme */
+    height: 150px;
+    border-radius: 50%;  /* Hace que las imágenes sean redondas */
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Transición suave */
+}
+
+.slide img:hover {
+    transform: scale(1.1);  /* Expansión ligera */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);  /* Sombreado suave */
+}
+
+/* Estilo para la sección de introducción */
+#intro {
+    background: linear-gradient(135deg, #e0f2e9, #ffffff); /* Fondo degradado */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    animation: fadeInUp 1s ease-out; /* Animación de entrada */
+    margin-bottom: 2em;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo del título y párrafos */
+#intro h1 {
+    color: #39A900;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+#intro p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1em;
+}
+
+/* Estilo de lista de modalidades */
+#intro ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+}
+
+#intro ul li {
+    font-size: 1em;
+    color: #333;
+    padding: 0.5em 0;
+    text-align: left;
+}
+
+/* Imagen con borde y efecto de zoom */
+#intro img {
+    max-width: 50%;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
+    margin-top: 1em;
+}
+
+/* Zoom en la imagen al pasar el cursor */
+#intro img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa en hover */
+}
+
+/* Estilo para la lista de modalidades de teletrabajo */
+.teletrabajo-list {
+    list-style: none; /* Elimina los bullets predeterminados */
+    padding: 0;
+    margin-top: 1.5em;
+    display: inline-block; /* Permite centrar la lista */
+    text-align: left; /* Alinea el contenido a la izquierda dentro de cada elemento */
+}
+
+.teletrabajo-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    border-left: 4px solid #39A900; /* Línea decorativa verde */
+    background-color: #f4f4f9; /* Fondo claro */
+    border-radius: 5px;
+}
+
+.teletrabajo-list li::before {
+    content: "✔"; /* Icono decorativo */
+    color: #39A900;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    flex-shrink: 0; /* Evita que el icono cambie de tamaño */
+}
+
+.teletrabajo-list strong {
+    color: #39A900; /* Color verde para el título de cada modalidad */
+    font-size: 1.1em;
+    margin-right: 0.3em;
+}
+
+.teletrabajo-list li p {
+    margin: 0;
+    color: #333;
+}
+
+/* Fondo de pantalla completo con slider */
+#background-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Coloca el slider detrás del contenido principal */
+}
+
+.background-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px); /* Efecto de desenfoque */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.background-slide.active {
+    opacity: 1; /* Muestra la imagen activa */
+}
+
+/* Estilos para el contenido principal */
+#content {
+    position: relative;
+    z-index: 1; /* Coloca el contenido por encima del fondo */
+    padding: 2em;
+}
+

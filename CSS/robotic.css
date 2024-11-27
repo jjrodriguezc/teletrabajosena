@@ -1,0 +1,103 @@
+.container {
+    max-width: 900px;
+    background: #f9f9f9;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.welcome-section h1 {
+    color: #39A900;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #00304D;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.advantages {
+    background-color: #e8f4fc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.advantages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.advantages li {
+    align-items: center; /* Centra verticalmente el icono y el texto */
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.advantages li i {
+    font-size: 2rem;
+    color: #39A900;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.advantages li strong {
+    font-weight: bold;
+    color: #00304D;
+}
+
+.advantages li div {
+    line-height: 1.4;
+    font-size: 1rem;
+}
+
+/* Estilo adicional para asegurar separación entre el título y descripción en cada ventaja */
+.advantages li div p {
+    margin: 0; /* Elimina márgenes adicionales en los párrafos */
+}
+
+.chatbox-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.chatbox-button:hover {
+    background-color: #004494;
+}
+
+.popup-welcome {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 6s forwards;
+    font-size: 1rem;
+}

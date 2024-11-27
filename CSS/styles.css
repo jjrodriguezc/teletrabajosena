@@ -1,0 +1,407 @@
+/* Global Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Variables de colores institucionales */
+:root {
+    --verde-institucional: #39A900;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --azul-oscuro: #00304D;
+    --azul-claro: #50E5F9;
+    --amarillo: #FDC300;
+    --violeta: #71277A;
+}
+
+/* Tipografía */
+body, h1, h2, h3, p, a {
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+    background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con menor opacidad */
+    backdrop-filter: brightness(0.9) blur(2px); /* Filtro aplicado solo al fondo */
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para el cuadro de contenido */
+    padding: 2em;
+    border-radius: 10px;
+    max-width: 600px;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h2, .hero-content p, .hero-content button {
+    color: var(--blanco);
+}
+
+.hero-content button {
+    background-color: var(--azul-oscuro);
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #013c1c;
+}
+
+.hero-logo {
+    display: block;
+    margin: 0 auto 10px; /* Centra el logo y agrega espacio debajo */
+    max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantén la proporción del logo */
+}
+
+/* Tarjetas de Información */
+#info-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1.5em;
+    padding: 2em;
+    text-align: center;
+}
+
+.card {
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    padding: 1.5em;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: var(--verde-institucional);
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: var(--negro);
+}
+
+.card .card-link {
+    display: inline-block;
+    margin-top: 1em;
+    color: var(--verde-institucional);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.card .card-link:hover {
+    color: #013c1c;
+}
+
+/* Consejos y Buenas Prácticas */
+#consejos {
+    padding: 2em;
+    background-color: #e0f2e9;
+    text-align: center;
+}
+
+#consejos h2 {
+    font-size: 2em;
+    color: var(--verde-institucional);
+    margin-bottom: 1em;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ajusta la imagen sin distorsión */
+    border-radius: 10px;
+}
+
+/* Descripción sobre el slider */
+.slide-description {
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--blanco);
+    padding: 1em;
+    font-size: 1.2em;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transition: font-size 0.3s ease;
+}
+
+/* Flechas de navegación */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+    color: var(--blanco);
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s, font-size 0.3s;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .slider-container {
+        height: 100vh;
+    }
+
+    .slide-description {
+        font-size: 1em;
+        padding: 0.8em;
+    }
+
+    .nav-arrow {
+        font-size: 1.5em;
+        padding: 0.4em;
+    }
+}
+
+
+/* Casos de Éxito con Carrusel */
+#casos-exito {
+    padding: 2em;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+#casos-exito h2 {
+    font-size: 2em;
+    color: var(--verde-institucional);
+    margin-bottom: 1em;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5em;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5em;
+    min-width: 200px;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+.carousel-item h4 {
+    color: var(--verde-institucional);
+    margin-top: 0.5em;
+}
+
+/* Footer */
+.pie-pagina {
+    background-color: var(--verde-institucional);
+    color: var(--blanco);
+    padding: 2em 0;
+}
+
+.grupo-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+    gap: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.box {
+    flex: 1 1 200px;
+    max-width: 250px;
+    padding: 1em;
+}
+
+.box h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+/* Red Social */
+.red-social a {
+    color: var(--blanco);
+    margin-right: 0.5em;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+.red-social a:hover {
+    color: #e0f2e9;
+}
+
+/* Formulario de contacto */
+.box form p {
+    margin: 0.5em 0 0.2em;
+}
+
+.box input[type="text"],
+.box input[type="email"],
+.box textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: none;
+    border-radius: 4px;
+}
+
+.box button {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.box button:hover {
+    background-color: #013c1c;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    #info-cards, .tips-container, .grupo-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-content h2 {
+        font-size: 2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para los botones de categoría */
+.category-button {
+    display: inline-block;
+    margin: 0.5em;
+    background-color: var(--azul-oscuro);
+    border: none;
+    color: var(--blanco);
+    padding: 0.7em 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.category-button:hover {
+    background-color: #013c1c;
+    transform: translateY(-2px);
+}
+
+/* Botones de categoría en fila */
+#consejos .category-buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+/* Mostrar el slider */
+.slider-container.visible {
+    display: block;
+    opacity: 1;
+}
+
+.slide {
+    display: none; /* Oculta todas las diapositivas por defecto */
+}
+
+.slide.active {
+    display: block; /* Muestra solo la diapositiva activa */
+}
