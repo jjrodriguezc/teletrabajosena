@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teletrabajo para Instructores del SENA</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section id="hero">
+        <div class="hero-content">
+            <img src="../Img/WaH.png" alt="Logo Teletrabajo" class="hero-logo">
+            <h2>Teletrabajo en el SENA</h2>
+            <p>Explora cómo el teletrabajo puede mejorar tu experiencia laboral y personal. Descubre normativas, beneficios y consejos.</p>
+            <button onclick="window.location.href='../View/chatbot.html'">Empezar</button>
+        </div>
+    </section>
+
+    <section id="info-cards">
+        <div class="card">
+            <h3>Normativa</h3>
+            <p>Infórmate sobre las normativas del teletrabajo en el SENA.</p>
+            <a href="../View/normativa.html" class="card-link">Ver más</a>
+        </div>
+        <div class="card">
+            <h3>Beneficios</h3>
+            <p>Descubre los beneficios de trabajar desde casa.</p>
+            <a href="../View/beneficios.html" class="card-link">Ver más</a>
+        </div>
+        <div class="card">
+            <h3>Preguntas Frecuentes</h3>
+            <p>Resuelve tus dudas sobre el teletrabajo.</p>
+            <a href="../View/faq.html" class="card-link">Ver más</a>
+        </div>
+        <div class="card">
+            <h3>Casos de Éxito</h3>
+            <p>Historias inspiradoras de teletrabajo en el SENA.</p>
+            <a href="../View/casosExito.html" class="card-link">Ver más</a>
+        </div>
+    </section>
+
+    <section id="consejos">
+        <h2>Consejos y Buenas Prácticas</h2>
+        <p>Pasa el cursor sobre cada categoría para ver más detalles</p>
+    
+        <!-- Botón y Slider para Ergonomía -->
+        <button class="category-button" onclick="toggleSlider('ergonomia')">Ergonomía</button>
+        <div class="slider-container" id="ergonomia-slider-container">
+            <div class="slider" id="ergonomia-slider">
+                <div class="slide">
+                    <img src="../Img/ergonomia1.jpeg" alt="Ergonomía 1">
+                    <div class="slide-description">
+                        <h4>Ergonomía</h4>
+                        <p>Ajusta la altura de la pantalla para evitar tensiones en el cuello.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/ergonomia2.jpeg" alt="Ergonomía 2">
+                    <div class="slide-description">
+                        <h4>Ergonomía</h4>
+                        <p>Utiliza una silla con soporte lumbar para cuidar tu espalda.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/ergonomia3.jpeg" alt="Ergonomía 3">
+                    <div class="slide-description">
+                        <h4>Ergonomía</h4>
+                        <p>Mantén los pies apoyados en el suelo o en un reposapiés.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/ergonomia4.jpeg" alt="Ergonomía 4">
+                    <div class="slide-description">
+                        <h4>Ergonomía</h4>
+                        <p>Usa un escritorio que permita una posición cómoda para los brazos.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/ergonomia5.jpeg" alt="Ergonomía 5">
+                    <div class="slide-description">
+                        <h4>Ergonomía</h4>
+                        <p>Descansa la vista cada 20 minutos para reducir la fatiga ocular.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flechas de navegación -->
+            <span class="nav-arrow left-arrow" onclick="prevSlide('ergonomia')">&#10094;</span>
+            <span class="nav-arrow right-arrow" onclick="nextSlide('ergonomia')">&#10095;</span>
+        </div>
+    
+        <!-- Botón y Slider para Organización del Tiempo -->
+        <button class="category-button" onclick="toggleSlider('organizacion')">Organización del Tiempo</button>
+        <div class="slider-container" id="organizacion-slider-container">
+            <div class="slider" id="organizacion-slider">
+                <div class="slide">
+                    <img src="../Img/organizacion1.jpeg" alt="Organización 1">
+                    <div class="slide-description">
+                        <h4>Organización del Tiempo</h4>
+                        <p>Establece horarios específicos para cada tarea.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/organizacion2.jpeg" alt="Organización 2">
+                    <div class="slide-description">
+                        <h4>Organización del Tiempo</h4>
+                        <p>Prioriza tareas según su urgencia e importancia.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/organizacion3.jpeg" alt="Organización 3">
+                    <div class="slide-description">
+                        <h4>Organización del Tiempo</h4>
+                        <p>Evita distracciones y mantén un ambiente de trabajo organizado.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/organizacion4.jpeg" alt="Organización 4">
+                    <div class="slide-description">
+                        <h4>Organización del Tiempo</h4>
+                        <p>Realiza una lista de tareas diaria para mantener el enfoque.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/organizacion5.jpeg" alt="Organización 5">
+                    <div class="slide-description">
+                        <h4>Organización del Tiempo</h4>
+                        <p>Utiliza herramientas de gestión del tiempo como calendarios.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flechas de navegación -->
+            <span class="nav-arrow left-arrow" onclick="prevSlide('organizacion')">&#10094;</span>
+            <span class="nav-arrow right-arrow" onclick="nextSlide('organizacion')">&#10095;</span>
+        </div>
+    
+        <!-- Botón y Slider para Pausas Activas -->
+        <button class="category-button" onclick="toggleSlider('pausas')">Pausas Activas</button>
+        <div class="slider-container" id="pausas-slider-container">
+            <div class="slider" id="pausas-slider">
+                <div class="slide">
+                    <img src="../Img/pausas4.jpeg" alt="Pausas Activas 1">
+                    <div class="slide-description">
+                        <h4>Pausas Activas</h4>
+                        <p>Haz estiramientos de cuello cada hora.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/pausas3.jpeg" alt="Pausas Activas 2">
+                    <div class="slide-description">
+                        <h4>Pausas Activas</h4>
+                        <p>Levántate y camina un poco cada dos horas.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/pausa5.jpg" alt="Pausas Activas 3">
+                    <div class="slide-description">
+                        <h4>Pausas Activas</h4>
+                        <p>Realiza ejercicios de manos y muñecas.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/pausas2.jpeg" alt="Pausas Activas 4">
+                    <div class="slide-description">
+                        <h4>Pausas Activas</h4>
+                        <p>Practica respiración profunda para reducir el estrés.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="../Img/pausas1.jpeg" alt="Pausas Activas 5">
+                    <div class="slide-description">
+                        <h4>Pausas Activas</h4>
+                        <p>Haz ejercicios de estiramiento de espalda.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Flechas de navegación -->
+            <span class="nav-arrow left-arrow" onclick="prevSlide('pausas')">&#10094;</span>
+            <span class="nav-arrow right-arrow" onclick="nextSlide('pausas')">&#10095;</span>
+        </div>
+    </section>
+
+    <!-- Carousel de casos de éxito -->
+    <section id="casos-exito">
+        <h2>Casos de Éxito</h2>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <p>"Gracias al teletrabajo, he podido mejorar mi calidad de vida."</p>
+                <h4>María López, Bogotá</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"La modalidad de teletrabajo me ha permitido ser más productivo."</p>
+                <h4>Carlos Pérez, Medellín</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Desde que inicié el teletrabajo, logro equilibrar mejor mi tiempo entre el trabajo y mi familia."</p>
+                <h4>Ana Martínez, Cali</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Agradezco la oportunidad de seguir formando jóvenes de manera virtual desde mi hogar."</p>
+                <h4>Juan Torres, Villavicencio</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Desde un rincón de La Guajira, el teletrabajo me ha permitido enseñar sin tener que viajar largas distancias."</p>
+                <h4>Luisa García, Uribia</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"La posibilidad de trabajar desde casa ha sido invaluable en estos tiempos, logrando un mejor balance personal."</p>
+                <h4>Jorge Ramírez, Bucaramanga</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Teletrabajar me ha permitido conectar con mis estudiantes de zonas rurales de una manera accesible."</p>
+                <h4>Sara Rojas, Popayán</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Aunque vivo en un pueblo pequeño, puedo enseñar y aportar mis conocimientos a toda Colombia."</p>
+                <h4>Felipe Gómez, San Gil</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"El teletrabajo ha sido una bendición para mis labores de docencia y ha eliminado largos tiempos de desplazamiento."</p>
+                <h4>Rosa Muñoz, Pereira</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Con el teletrabajo puedo seguir enseñando desde casa mientras cuido a mi familia."</p>
+                <h4>Claudia Castillo, Montería</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"He logrado adaptar mis clases para que mis estudiantes en Nariño puedan acceder desde cualquier lugar."</p>
+                <h4>David Espinosa, Pasto</h4>
+            </div>
+            <div class="carousel-item">
+                <p>"Desde casa, siento que soy más productivo y puedo conectar mejor con mis estudiantes."</p>
+                <h4>Laura Ortega, Manizales</h4>
+            </div>
+        </div>
+    </section>
+    
+
+    <script src="../Js/header.js"></script>
+    <script src="../Js/footer.js"></script>
+    <script src="../Js/main.js"></script>
+</body>
+</html>
